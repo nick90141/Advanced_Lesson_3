@@ -1,5 +1,8 @@
 package task_3;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -14,7 +17,13 @@ public class Main {
         String first = text.substring(0, i);
         String second = text.substring(i);
 
-        System.out.println("Первая половина: " + first);
+        System.out.println("\nПервая половина: " + first);
         System.out.println("Вторая половина: " + second);
+
+        Path absolute = Paths.get("C:\\Users\\User\\Documents\\example.txt");
+        Path relative = Paths.get("example.txt");
+
+        System.out.println("\nАбсолютный путь: " + absolute);
+        System.out.println("Относительный путь: " + relative);
     }
 }
